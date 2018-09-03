@@ -1,4 +1,4 @@
-program project3;
+program project1;
 
 const
   N = 3;

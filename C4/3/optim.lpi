@@ -11,7 +11,7 @@
       </Flags>
       <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
-      <Title Value="Project1"/>
+      <Title Value="optim"/>
       <UseAppBundle Value="False"/>
       <ResourceType Value="res"/>
     </General>
@@ -28,9 +28,8 @@
     </RunParams>
     <Units Count="1">
       <Unit0>
-        <Filename Value="Project1.pas"/>
+        <Filename Value="optim.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="project1"/>
       </Unit0>
     </Units>
   </ProjectOptions>
@@ -38,7 +37,7 @@
     <Version Value="11"/>
     <PathDelim Value="\"/>
     <Target>
-      <Filename Value="Project1"/>
+      <Filename Value="optim"/>
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
