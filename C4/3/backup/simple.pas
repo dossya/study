@@ -11,7 +11,7 @@ begin
 
   a := GetMem(N * sizeof(integer));
   for i := 0 to N - 1 do
-    readln(a[i]);
+    a[i] := random(500) + 1;
 
   for i := 0 to N - 2 do
     for j := i + 1 to N - 1 do

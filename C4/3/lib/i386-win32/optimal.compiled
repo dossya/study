@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus11\fpc\3.0.4\bin\i386-win32\fpc.exe" Date="1286835357"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -l -vewnhibq -FiC:\Projects\study\C4\3\lib\i386-win32 -FuC:\Projects\study\C4\3\ -FUC:\Projects\study\C4\3\lib\i386-win32\ optimal.pas"/>
+  <Complete Value="False"/>
+</CONFIG>
