@@ -11,33 +11,33 @@ var
 
 begin
   readln(N);
-
+  randomize();
   for k := 0 to 3 do
   begin
 
     for i := 0 to N - 1 do
-      a[i] := random(50) + 1;
+      a[i] := random(20) + 1;
 
     for i := 0 to N - 1 do
-      writeln(a[i]);
+      write(a[i], ' ');
 
     readln(R);
 
     s := Concat('0', IntToStr(k));
     AssignFile(f, s);
+    rewrite(f);
+    Writeln(f, N);
+
     for i := 0 to N - 1 do
-    begin
-      append(f);
       Writeln(f, a[i]);
-      Close(f);
-    end;
+
+    Close(f);
 
     s := Concat('0', IntToStr(k), '.a');
     AssignFile(f, s);
-    append(f);
+    rewrite(f);
     Writeln(f, R);
     Close(f);
   end;
 
-  readln();
 end.

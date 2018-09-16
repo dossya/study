@@ -12,15 +12,13 @@ begin
 
   t := 0;
 
-  readln(N);
+  //AssignFile(f, '00');
+  //reset(f);
+  Readln(N);
 
-  AssignFile(f, '00');
   for i := 1 to N do
   begin
-    readln(a);
-    append(f);
-    Writeln(f, a);
-    Close(f);
+    Readln(a);
     if (a mod 7 = 0) and (a > k) then
     begin
       k := a;
@@ -29,13 +27,13 @@ begin
     if (a > t) and (a * k mod 2 = 0) then
       t := a;
   end;
+  //Close(f);
 
-  writeln(k * t);
+  writeln(k * t + 1);
 
-  AssignFile(f, '00.out');
-  write(f);
-  Writeln(f, k * t);
-  Close(f);
+  //AssignFile(f, '00.out');
+  //Write(f);
+  //Writeln(f, k * t);
+  //Close(f);
 
-  readln();
 end.
