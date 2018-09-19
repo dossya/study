@@ -6,7 +6,7 @@ var
 
   function optimal(): integer;
   var
-    k, t, c, d: integer;
+    k, t, c, s, d: integer;
   begin
     k := 0;
     t := 0;
@@ -33,6 +33,7 @@ var
       exit(k * t)
     else
       exit(k * c);
+
   end;
 
   function simple(): integer;

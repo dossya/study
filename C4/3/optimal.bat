@@ -1,3 +1,4 @@
+C:\lazarus11\fpc\3.0.4\bin\i386-win32\fpc.exe optimal.pas
 optimal.exe < 00 > 00.out  
 optimal.exe < 01 > 01.out
 optimal.exe < 02 > 02.out

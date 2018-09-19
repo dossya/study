@@ -29,7 +29,7 @@ begin
   end;
   //Close(f);
 
-  writeln(k * t + 1);
+  writeln(k * t);
 
   //AssignFile(f, '00.out');
   //Write(f);
