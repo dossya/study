@@ -6,35 +6,32 @@ var
 
   function optimal(): integer;
   var
-    k, t, c, s, d: integer;
+    m, m2, m7, m14: integer;
   begin
-    k := 0;
-    t := 0;
-    c := 0;
-    d := 0;
+    m := 0;
+    m2 := 0;
+    m7 := 0;
+    m14 := 0;
     for i := 1 to N do
     begin
-      if (a[i] mod 7 = 0) and (a[i] > k) then
+      if (a[i] mod 2 = 0) and (a[i] mod 7 <> 0) and (a[i] > m2) then
+        m2 := a[i];
+      if (a[i] mod 7 = 0) and (a[i] mod 2 <> 0) and (a[i] > m7) then
+        m7 := a[i];
+      if (a[i] mod 14 = 0) and (a[i] > m14) then
       begin
-        d := k;
-        if (d mod 2 = 0) and (d > c) then
-          c := d;
-        if (d > t) then
-          t := d;
-        k := a[i];
+        m14 := a[i];
         continue;
       end;
-      if (a[i] mod 2 = 0) and (a[i] > c) then
-        c := a[i];
-      if (a[i] > t) then
-        t := a[i];
+      if (a[i] > m) then
+        m := a[i];
     end;
-    if (k * t mod 2 = 0) then
-      exit(k * t)
+    if m2 * m7 > m14 * m then
+      exit(m2 * m7)
     else
-      exit(k * c);
-
+      exit(m14 * m);
   end;
+
 
   function simple(): integer;
   var
@@ -49,21 +46,17 @@ var
   end;
 
 begin
-  Readln(N);
+  N := 10;
   randomize();
-  for j := 1 to 10000 do
+  for j := 1 to 100000 do
   begin
     for i := 1 to N do
-      a[i] := random(50) + 1;
+      a[i] := random(30) + 1;
     o := optimal();
     s := simple();
     if s <> o then
-    begin
       writeln('error');
-      writeln(s, ' ', o);
-    end
-    else
-      writeln('ok');
   end;
+  writeln('done');
   readln();
 end.

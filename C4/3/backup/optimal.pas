@@ -39,6 +39,6 @@ begin
   readln(N);
   for i := 1 to N do
     readln(a[i]);
-  writeln(optimal());
+  writeln(simple());
 
 end.
