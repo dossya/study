@@ -20,6 +20,8 @@ var
         m7 := a[i];
       if (a[i] mod 14 = 0) and (a[i] > m14) then
       begin
+        if (m14 > m) then
+        m := m14;
         m14 := a[i];
         continue;
       end;
@@ -47,15 +49,17 @@ var
 
 begin
   N := 10;
-  //randomize();
-  for j := 1 to 100000 do
+  randomize();
+  for j := 1 to 1000000 do
   begin
     for i := 1 to N do
-      a[i] := random(30) + 1;
+      a[i] := random(90) + 1;
     o := optimal();
     s := simple();
-    if s <> o then
+    if s <> o then begin
       writeln('error');
+      optimal();
+    end;
   end;
   writeln('done');
   readln();

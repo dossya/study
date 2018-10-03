@@ -23,6 +23,8 @@ var
           m7 := a[i];
         if (a[i] mod 14 = 0) and (a[i] > m14) then
         begin
+          if (m14 > m) then
+          m := m14;
           m14 := a[i];
           continue;
         end;
